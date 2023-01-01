@@ -27,12 +27,13 @@ jobs:
         
     - name: Docker Build Image
       run: |
-        docker build -t alaanescobedo/docker-graphql-actions:0.0.1 .
+        docker build -t alaanescobedo/docker-graphql-actions:0.0.2 .
+        docker build -t alaanescobedo/docker-graphql-actions:latest .
         
     - name: Docker Push Image
       run: |
-        docker push alaanescobedo/docker-graphql-actions:0.0.1
-        
+        docker push alaanescobedo/docker-graphql-actions:0.0.2
+        docker push alaanescobedo/docker-graphql-actions:latest        
         
 #     - name: Build the Docker image
 #       run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
